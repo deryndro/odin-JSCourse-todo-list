@@ -112,11 +112,17 @@ const everythingDOM = (() => {
         const todoListContainer = document.createElement("div");
         todoListContainer.classList.add("todo-list-container");
 
+        // Item 1 title
         const todoListTitle = document.createElement("p");
         todoListTitle.append(todoList.title);
 
+        // Item 2 description
         const todoListDescription = document.createElement("p");
         todoListDescription.append(todoList.description);
+
+        // Item 3 date
+        const todoListDate = document.createElement("p");
+        todoListDate.append(todoList.date);
 
         // Put project id and todolist id as attribute to todoListContainer
         todoListContainer.setAttribute("projectId", `${project.id}`);
@@ -146,6 +152,7 @@ const everythingDOM = (() => {
         todoListContainer.append(checkbox);
         textContainer.append(todoListTitle);
         textContainer.append(todoListDescription);
+        textContainer.append(todoListDate);
       });
 
       // Addtodolist container
